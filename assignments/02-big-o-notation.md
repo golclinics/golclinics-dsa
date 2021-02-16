@@ -1,4 +1,4 @@
-Complete the selected challenges in the Hackerank interview kit.
+Complete the selected challenges below from the Hackerrank interview kit.
 - [ ] [Flatland Space Stations](https://www.hackerrank.com/challenges/flatland-space-stations/problem) - _Easy_
 - [ ] [Between Two Sets](https://www.hackerrank.com/challenges/between-two-sets/problem) - _Easy_
 - [ ] [Non-Divisible Subset](https://www.hackerrank.com/challenges/non-divisible-subset/problem) - _Medium_
