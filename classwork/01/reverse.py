@@ -3,11 +3,14 @@
 
 
 def reverse1(a):
+    i = 0
     j = len(a)
-    b = []
+    b = a[:]
 
     while j > 0:
-        b.append(a[j - 1])
+        #b.append(a[j - 1]) -> not efficient
+        b[i] = a[j - 1]
+        i += 1
         j -= 1
 
     return b
