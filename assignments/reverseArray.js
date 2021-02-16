@@ -10,6 +10,7 @@ function reverse(A){
         reverseArray( arr );
       }
     }
+    
   
     reverseArray(A);
     return output;
