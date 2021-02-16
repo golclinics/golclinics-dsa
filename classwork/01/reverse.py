@@ -1,6 +1,7 @@
 def reverse(array):
     """
     Returns the reverse of the given array
+    O(n) TS
     """
     if len(array) == 0:
         return array
