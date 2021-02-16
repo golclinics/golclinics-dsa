@@ -17,4 +17,4 @@
     - [ ] [Common Child](https://www.hackerrank.com/challenges/common-child/problem) - _Medium_
 
 1. Bonus: _TBD_
-    - [] Creating a deep copy of an array.
+    - [ ] Creating a deep copy of an array.
