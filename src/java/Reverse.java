@@ -1,8 +1,11 @@
 import java.util.Arrays;
 
 public class Reverse {
-    //O(n)
-    public static int[] reverse(int[] A){
+    /*
+    * Brute force solution
+    *
+    * */
+    public static int[] reverseBruteForce(int[] A){
         int reverse_index = 0;
         int[] reversed_array = new int [A.length];
         for (int i=A.length - 1;i>=0;i--){
@@ -11,8 +14,10 @@ public class Reverse {
         }
         return reversed_array;
     }
-    //O(1)
-    public static int[] reverse1(int[]A){
+    /*
+    * Optimal solution
+    * */
+    public static int[] reverseOptimal(int[]A){
         int mid = (A.length + 1)/2;
         int i = 0;
         int j = A.length-1;
@@ -24,11 +29,5 @@ public class Reverse {
             j--;
         }
         return A;
-    }
-
-    public static void main(String[] args) {
-        int[] A = {1,2,5,6};
-        //in this case assuming reverse point is 2
-        System.out.println(Arrays.toString(reverse1(A)));
     }
 }
