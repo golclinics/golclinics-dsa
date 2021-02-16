@@ -1,18 +1,19 @@
 
 
-function reverse(A){
-    let output = [];
+function reverse(A) {
+    let temp;
+    let first = 0;
+    let last = A.length -1;
 
-    //recursive function to reverse an array
-    function reverseArray (arr){
-      if (arr.length !== 0){
-        output.push( arr.pop() );
-        reverseArray( arr );
-      }
+    while(first < last){
+        
+        temp = A[first];
+        A[first] = A[last];
+        A[last] = temp;
+        first++;
+        last--;
     }
-    
-  
-    reverseArray(A);
-    return output;
+    return A
 }
-reverse([1,2,5,6]) /// [ 6, 5, 2, 1 ]  O(n)
+
+reverse([1,2,3,4,5,6,7])   //space o(1)
