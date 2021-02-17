@@ -1,7 +1,7 @@
 # My First Solution
 
 def Reverse(A):
-  return A[::-1]
+    return A[::-1]
 
 
 # Example 1
@@ -22,8 +22,9 @@ print(Reverse([1]))
 # My second solution
 
 def reverse(A):
-    
-    if len(A) == 0: return []
+    x = len(A)
+
+    if x == 0: return []
     else: return [A.pop()] + reverse(A)
 
 
