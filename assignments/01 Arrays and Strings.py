@@ -176,6 +176,16 @@ def counter(s, i):
 
 ############ Creating a deep copy of an array ################################
 
+def deepCopy(arr):
+    default_arr = []
+    for el in arr:
+        if isinstance(el, list):
+            default_arr.append(deepCopy(el))
+        else:
+            default_arr.append(el)
+    return default_arr
+
+
 ############ Reverse an array with O(1) space complexity #####################
 
 def reverse(arr):
