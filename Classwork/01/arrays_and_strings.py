@@ -22,6 +22,7 @@ print(Reverse([1]))
 # My second solution
 
 def reverse(A):
+    
     x = len(A)
 
     if x == 0: return []
