@@ -1,5 +1,5 @@
 
-
+# iterative approach
 def reverse(A):
     n = len(A)
     r_list = A[:] # clone the original array
@@ -11,5 +11,17 @@ def reverse(A):
 
     return r_list
 
+# recursive approach
+def reverse_recursive(A):
+    
+    if len(A) == 0:
+        # base case
+        return []
+    else:
+        # recursive case
+        return [A.pop()] + reverse_recursive(A)
+
+
 # driver code
 print(reverse([1,2,3,4,5]))
+print(reverse_recursive([1,2,3,4,5]))
