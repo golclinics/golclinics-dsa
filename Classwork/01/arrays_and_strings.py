@@ -23,7 +23,7 @@ print(reverse([1]))
 
 def Reverse(A):
     
-    if len(A) is 0: return []
+    if len(A) == 0: return []
     else: return [A.pop()] + Reverse(A)
 
 
