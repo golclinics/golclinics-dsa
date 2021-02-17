@@ -20,6 +20,7 @@ print(reverse([1]))
 
 
 # My second solution
+
 def Reverse(A):
     
     if len(A) is 0: return []
@@ -27,10 +28,10 @@ def Reverse(A):
 
 
 # Example 1
-print(reverse([1, 2, 5, 6]))
+print(Reverse([1, 2, 5, 6]))
 
 # Example 2
-print(reverse([]))
+print(Reverse([]))
 
 # Example 3
-print(reverse([1]))
+print(Reverse([1]))
