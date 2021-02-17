@@ -1,6 +1,6 @@
 Disadvantages of reversing a list using slicing (eg A[::-1])
-    - It does a shallow copy ie, modifying an element in the original list 
-    will also be reflected in the copy
+    - It does a shallow copy ie, modifying an element in the original list will 
+    also be reflected in the copy
     - Not perfomant, works well for small arrays
 
 Points to note:
