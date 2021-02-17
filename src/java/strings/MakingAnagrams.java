@@ -1,5 +1,9 @@
 package strings;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class MakingAnagrams {
     static int makeAnagram(String a, String b) {
         HashMap<Character,Integer> count = new HashMap();
