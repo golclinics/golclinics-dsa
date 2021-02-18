@@ -1,3 +1,6 @@
+
+#O(n^2) time complexity
+#O(1) space complexity
 def target_sum(arr, target):
     len_a = len(arr)
     sum_arr = None
