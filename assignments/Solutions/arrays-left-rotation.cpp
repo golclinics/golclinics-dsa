@@ -16,11 +16,12 @@ vector<int> rotateHelper(const vector<int> &a, int &d, const bool isRightRotatio
         return a;
     }
     
+     // Get the array_size
+    int array_size = a.size();
+      
     // Create a temporary vector for swapping
     // in O(n)
-    vector<int> temp(a);
-    
-    int array_size = a.size();
+    vector<int> temp(array_size);
     
     // Loop over each element in the original array
     for(int i = 0; i < array_size; ++i){
