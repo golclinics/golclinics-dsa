@@ -47,7 +47,7 @@ class Solution
 
     static void Main(string[] args)
     {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+        //TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
         string[] nd = Console.ReadLine().Split(' ');
 
@@ -59,10 +59,14 @@ class Solution
         ;
         int[] result = rotLeft(a, d);
 
-        textWriter.WriteLine(string.Join(" ", result));
+        Console.WriteLine(result);
 
-        textWriter.Flush();
-        textWriter.Close();
+        Console.WriteLine();
+
+        //textWriter.WriteLine(string.Join(" ", result));
+
+        //textWriter.Flush();
+        //textWriter.Close();
     }
 }
 
