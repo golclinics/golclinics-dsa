@@ -1,16 +1,17 @@
 
 #O(n^2) time complexity
 #O(1) space complexity
+
+
 def target_sum(arr, target):
     len_a = len(arr)
     sum_arr = None
     for i in range(len_a):
         for j in range(i + 1, len_a):
-            sum_a = sum(arr[:i + 1])
-            sum_b = sum_a + arr[j]
+            sum_a = arr[i] + arr[j]
 
-            if sum_b == target:
-                sum_arr = [*range(i + 1), j]
+            if sum_a == target:
+                sum_arr = [i, j]
     return sum_arr
 
 
