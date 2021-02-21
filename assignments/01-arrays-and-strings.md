@@ -16,4 +16,6 @@
     - [ ] [Special String Again](https://www.hackerrank.com/challenges/special-palindrome-again/problem) - _Medium_
     - [ ] [Common Child](https://www.hackerrank.com/challenges/common-child/problem) - _Medium_
 
-1. Bonus: _TBD_
+1. Bonus:
+    - [ ] Creating a deep copy of an array, write a function `deepCopy`
+    - [ ] Reverse an array with O(1) space complexity (_in-place reverse_)
