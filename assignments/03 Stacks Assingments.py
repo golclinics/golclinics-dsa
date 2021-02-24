@@ -44,6 +44,43 @@ def isValid(s):
 
 print(isValid("()"))
 print(isValid("()[]{}({}[]{[]})"))
-    
 
-        
+######### Simple Calculator ##################################################
+######### Time Complexity: O(n) ##############################################
+######### Space Complexity: O(n) #############################################
+def evaluate(s):
+    def update(sign, num_digit):
+        if num_digit.strip() == '':
+            return
+        num = int(num_digit)
+        stack.append(num if sign == "+" else -num)
+    
+    operators = {'+', '-', '(', ')'}
+    num_digit = ''
+    stack = []
+    # At start point we start with positive
+    sign = '+'
+    i = 0
+    while i < len(s):
+        char = s[i]
+        if char not in operators:
+            num_digit += char
+        elif char == "(":
+            # Rerun the ops with a return value
+            update(sign, num_digit)
+            addition, sum_val = evaluate(s[i+1:])
+            i += (addition + 1)
+            update(sign, str(sum_val))
+        elif char == ")":
+            #Close the ops with the return value
+            update(sign, num_digit)
+            return i, sum(stack)
+        else:
+            update(sign, num_digit)
+            sign = char
+            num_digit = ''
+        i += 1
+    update(sign, num_digit)
+    return sum(stack)
+
+print(evaluate("1 + 2 + (2 + (2 + 4) + (1 + 3) )"))
