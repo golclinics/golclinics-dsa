@@ -10,4 +10,4 @@
 
 2. Bonus:
     - [ ] Implement a deque
-    - [ ] Implement a stack in a language of your choice using a linked list.
+    - [ ] Implement a queue in a language of your choice using a linked list.
