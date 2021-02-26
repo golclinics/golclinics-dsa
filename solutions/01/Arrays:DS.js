@@ -1,6 +1,6 @@
 // Complete the hourglassSum function below.
 function hourglassSum(arr) {
-    let i=0,j=0,sum= 0,highestSum=-54;
+    let i=0,j=0,sum= 0,highestSum=-63;
 
     while(i<4){
         while(j<4){
