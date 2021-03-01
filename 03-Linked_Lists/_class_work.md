@@ -1,4 +1,8 @@
 
+Create linked list with six nodes. 
+Traverse the created list and print the data of each node.
+
+
 **Instructions:**
 - Fork (the clone) `https://github.com/golclinics/golclinics-dsa` and create a folder/directory called
 `classwork`. In it, create another folder/dir called `04`. That is where we will put all our
