@@ -1,6 +1,7 @@
+## Warm-up challenge
 
-Create linked list with six nodes. 
-Traverse the created list and print the data of each node.
+Create a simple linked list with six nodes. 
+write a method printList() that traverses the created list and prints the data of each node.
 
 
 **Instructions:**
