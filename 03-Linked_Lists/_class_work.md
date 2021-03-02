@@ -3,6 +3,7 @@
 Create a simple singly linked list with six nodes. 
 a) write a method printList() that traverses the created list and prints the data of each node.
 b) Write a method that returns a sum of all elements of the singly linked list
+
     For example give a linked list: 3 -> 10 -> 5 -> 1 -> 6
     sum = 3 + 10 + 5 + 1 + 6 = 25.
 
