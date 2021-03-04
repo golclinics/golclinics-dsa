@@ -13,7 +13,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def printList(self):
+    def __repr__(self):
 
         node = self.head
         nodes = []
@@ -23,6 +23,9 @@ class LinkedList:
         nodes.append("None")
         
         return "->".join(nodes)
+
+    def printList(self):
+        print(self)
 
     def reverse(self, llist):
         if not llist.head or not llist.head.next:
@@ -54,8 +57,8 @@ third = Node("c")
 
 first.next = second
 second.next = third
-print(llist.printList())
+llist.printList()
 
 llist.reverse(llist)
 
-print(llist.printList())
+llist.printList()
