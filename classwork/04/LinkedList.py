@@ -4,6 +4,8 @@ class Node:
         self.next = None
         # self.prev = None
 
+    
+
 
 class Linkedlist:
 
@@ -62,6 +64,7 @@ class Linkedlist:
             previous_node = self.findNode(self.size() - 2, True)
             current_data = self._tail.data
             self._tail = previous_node
+            self._tail.next = None
         self._count -= 1
         return current_data
         
