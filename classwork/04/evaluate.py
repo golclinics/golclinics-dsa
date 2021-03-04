@@ -18,7 +18,7 @@ class LinkedList:
         node = self.head
         nodes = []
         while node is not None:
-            nodes.append(node.data)
+            nodes.append(str(node.data))
             node = node.next
         nodes.append("None")
         
@@ -45,15 +45,26 @@ class LinkedList:
         llist.head = previous
         return llist
 
+    def sum(self):
+        list_sum = 0
+
+        node = self.head
+
+        while node is not None:
+            list_sum += node.data
+            node = node.next
+
+        return list_sum
+
 
 
 llist = LinkedList()
 print(llist.printList())
-first = Node("a")
+first = Node(1)
 llist.head = first
 print(llist.printList())
-second = Node("b")
-third = Node("c")
+second = Node(2)
+third = Node(3)
 
 first.next = second
 second.next = third
@@ -62,3 +73,4 @@ llist.printList()
 llist.reverse(llist)
 
 llist.printList()
+print(llist.sum())
