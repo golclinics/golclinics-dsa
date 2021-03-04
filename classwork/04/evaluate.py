@@ -55,3 +55,7 @@ third = Node("c")
 first.next = second
 second.next = third
 print(llist.printList())
+
+llist.reverse(llist)
+
+print(llist.printList())
