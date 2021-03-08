@@ -42,6 +42,7 @@ class LinkedList
 
 	static void addToLast(Node head_node, int newData)
     {
+		/* uncomment to avoid Recurrsion */
 
 		//Node new_node = new Node(newData);
 
@@ -63,7 +64,7 @@ class LinkedList
 		//currentNode.next = new_node;
 	}
 
-	private Node Remove(Node headNode, int nodeValue)
+	static Node Remove(Node headNode, int nodeValue)
 	{
 		Node currentNode = headNode;
 
@@ -122,6 +123,8 @@ class LinkedList
 
 		addToLast(head, 9);
 
+		Remove(head, 4);
+
 
 
 
@@ -147,8 +150,7 @@ class LinkedList
 
 		}
 
-       
-
+		
 		Console.ReadLine();
 	}
 }
