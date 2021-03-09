@@ -1,13 +1,11 @@
 def wordFrequency(S):
 
     d = {}
-
     arr = S.split()
     max_val = 0
     c = ''
 
     for i in arr:
-
         if i in d:
             d[i] += 1
 
@@ -22,6 +20,5 @@ def wordFrequency(S):
 
 # Time and space complexity O(N)
 # plot a histogram for each occurence of words
-
 wordFrequency("hello there hello there there")
     
