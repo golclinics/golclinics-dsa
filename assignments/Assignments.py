@@ -57,9 +57,7 @@ student_c = student_a
 student_d = Student("Joshua Maina", 23, 123)
 students = [student_a, student_b, student_c, student_d]
 for index, student in enumerate(students, 1):
-    print("Student {}:\n"
-          "Student name: {}; Student age: {}; Student marks: {}\n"
-          "Student hash - method 1: {}\n"
-          "Student hash - method 2: {}".format(index, student.get_name(), student.get_age(),
-                                               student.get_marks(), hash_object(student, method_one=True),
-                                               hash_object(student)))
+    print("Students {}".format(index))
+    print(student)
+    print("Student hash - method 1: {}\n"
+          "Student hash - method 2: {}".format(hash_object(student, method_one=True), hash_object(student)))

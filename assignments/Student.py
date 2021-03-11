@@ -12,3 +12,7 @@ class Student:
 
     def get_name(self):
         return self._name
+
+    def __repr__(self) -> str:
+        return "Student name: {}; Student age: {}; Student marks: {}"\
+            .format(self._name, self._age, self._marks)
