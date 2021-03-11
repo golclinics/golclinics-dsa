@@ -3,6 +3,7 @@ class GolDictionaryLinearProbe:
         self.size = size
         self.items = [None] * self.size
         self.keys = [None] * self.size
+        self.count = 0
 
     def _hash(self, key):
         total = 0
@@ -15,10 +16,14 @@ class GolDictionaryLinearProbe:
 
     def put(self, key, value):
         hash_value = self._hash(key)
+        if self.load() == 1:
+            print("The dictionary is full. Consider deleting items")
+            return False
         # Check for None and deleted values
         if self.keys[hash_value] is None or self.keys[hash_value] is False:
             self.keys[hash_value] = key
             self.items[hash_value] = value
+            self.count += 1
             return True
         rehash_value = self._rehash(hash_value)
         # Check for empty or deleted
@@ -27,6 +32,7 @@ class GolDictionaryLinearProbe:
             if self.keys[rehash_value] is None or self.keys[rehash_value] is False:
                 self.keys[rehash_value] = key
                 self.items[rehash_value] = value
+                self.count += 1
                 return True
         return False
 
@@ -67,7 +73,11 @@ class GolDictionaryLinearProbe:
               "Value : {}", self.keys[hash_value], self.items[hash_value])
         self.keys[hash_value] = False
         self.items[hash_value] = False
+        self.count -= 1
         return True
+
+    def load(self):
+        return self.count / self.size
 
     def __repr__(self):
         main_str = "The items in the dictionary are :\n"
@@ -77,7 +87,7 @@ class GolDictionaryLinearProbe:
 
 
 if __name__ == '__main__':
-    class_dictionary = GolDictionaryLinearProbe(10)
+    class_dictionary = GolDictionaryLinearProbe(5)
     class_dictionary.put("s001", "Joshua")
     class_dictionary.put("s002", "George")
     class_dictionary.put("s003", "Collins")
@@ -99,3 +109,9 @@ if __name__ == '__main__':
 
     print("Now we try and get the 002s element")
     print(class_dictionary.get("002s"))
+
+    class_dictionary.put("s004", "Caleb")
+    class_dictionary.put("s005", "Edwin")
+    print("This put should fail due to load")
+    class_dictionary.put("s006", "Failed put")
+
