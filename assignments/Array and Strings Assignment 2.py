@@ -19,6 +19,14 @@ def reverse_sentence(array_sentence):
     return [char for char in sentence]
 
 
-if __name__ == "__main__":
-    array_ = ['t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'g', 'o', 'o', 'd']
-    print(reverse_sentence(array_))
+def minimum_swaps(arr):
+    index = 0
+    swaps = 0
+    while index < len(arr):
+        if (index + 1) != arr[index]:
+            current = arr[index]
+            arr[index], arr[current - 1] = arr[current - 1], arr[index]
+            swaps += 1
+        else:
+            index += 1
+    return swaps
