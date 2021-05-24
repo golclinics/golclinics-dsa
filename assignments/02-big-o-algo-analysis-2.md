@@ -221,7 +221,7 @@ def int_sqrt_bisect(x):
         else: # our diff was higher than the true square root
             high = guess # we continue searching in the range [low - guess]
         
-        if high - low > 1: # at this point we can't an integer square root for x
+        if high - low <= 1: # at this point we can't an integer square root for x
             break
 
         guess = (low + high) // 2 # pick a guess in the middle of the new range
