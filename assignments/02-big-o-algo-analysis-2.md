@@ -88,7 +88,7 @@ def is_palindrome_recur(s):
     # and s[1: -1] will create a slice starting from the second element to the second last element
     # "madam"[1: -1] -> "ada"
     return s[0] == s[-1] and is_palindrome_recur(s[1:-1])
-
+```
 **Bonus questions**:
 
 - Between `is_palindrome`, `is_palindrome_rev` and `is_palindrome_recur` which do you think is more efficient, and why?
