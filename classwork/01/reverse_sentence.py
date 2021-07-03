@@ -6,32 +6,22 @@
 # A = ['t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'g', 'o', 'o', 'd'] 
 # reverseSentence(A) A // ['g', 'o', 'o', 'd', ' ', 'i', 's', ' ', 't', 'h', 'i', 's']
 
-def get_words(S):
-    sentence = []
-    words = []
-
-    for s in S:
-        if s != ' ':
-            words.append(s)
-        else:
-            sentence.append(words)
-            words = []
-
-    sentence.append(words)
-
-    return sentence
-
 def reverse_sentence(S):
+    word = ""
+    sentence = ""
 
-    words = get_words(S)
-    res = []
+    for char in S:
+        if char == ' ':
+            sentence = word + ' ' + sentence # reversed words
+            word = "" # reset word on space encounter
+        else:
+            word += char
 
-    for i in range(len(words) - 1, -1, -1):
-        for c in words[i]:
-            res.append(c)
-        res.append(' ')
-    
-    return res[:-1]
-
+    if word != "":
+        sentence = word + " " + sentence
+    return sentence
+# Time complexity O(n)
+# Space complexity O(n)
 
 print(reverse_sentence(['t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'g', 'o', 'o', 'd']))
+
