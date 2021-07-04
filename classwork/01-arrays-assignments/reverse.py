@@ -36,21 +36,13 @@ def reverse_recursive(A):
 
 def reverse_inplace(arr):
 
-    n = len(arr)
+    left = 0
+    right = len(arr) - 1
 
-    mid = n // 2
-
-    if n % 2 == 0:
-        left = mid - 1
-        right = mid
-    else:
-        left = mid - 1
-        right = mid + 1
-    
-    for _ in range(mid):
+    while left < right:
         arr[left], arr[right] = arr[right], arr[left]
-        left -= 1
-        right += 1
+        left += 1
+        right -= 1
 
     return arr
 
