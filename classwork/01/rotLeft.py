@@ -2,11 +2,13 @@ def rotLeft(a, d):
 
     # shift d times to the left (d is in the range of 1 - n)
     n = len(a)
-    temp = [None for _ in range(n)]
+    k = d % n
+
+    res = a[:]
     for i in range(n):
-        temp[i-d] = a[i]
+        res[i-k] = a[i]
     
-    return temp
+    return res
 
 # driver code
-print(rotLeft([1,2,3,4,5], 4))
+print(rotLeft([1,2,3,4,5], 1))
