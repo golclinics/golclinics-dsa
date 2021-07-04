@@ -63,10 +63,9 @@ def grade_student_bs(marks, grades):
         return grades[mid].gradeName
     elif grades[mid].start < marks:
         r = mid
-        return grade_student_bs(marks, grades[l:r])
     elif grades[mid].to > marks:
         l = mid + 1
-        return grade_student_bs(marks, grades[l:r])
+    return grade_student_bs(marks, grades[l:r])
 
 
 def super_students_bs(grades, students):
