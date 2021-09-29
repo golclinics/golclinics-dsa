@@ -26,6 +26,6 @@ function swap<T>(arr: T[], idx1: number, idx2: number): void {
   [arr[idx2], arr[idx1]] = [arr[idx1], arr[idx2]];
 }
 
-let A = [10, 5, 6, 9];
+const A = [10, 5, 6, 9];
 console.log(reverseArray<number>(A));
 // A = [9, 6, 5, 10]

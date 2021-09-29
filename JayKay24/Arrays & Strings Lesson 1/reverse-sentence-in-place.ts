@@ -2,7 +2,7 @@ const SPACE = " ";
 
 /**
  * Reverses the "words" (not individual characters) in-place
- * @param {string[]} - wordsList an array of characters representing words
+ * @param {string[]} wordsList - an array of characters representing words
  * @returns {string[]} modified, reversed wordsList array
  */
 function reverseSentence(wordsList: string[]): string[] {
@@ -33,6 +33,13 @@ function reverseSentence(wordsList: string[]): string[] {
   return wordsList;
 }
 
+/**
+ * Build up a word from the wordsList and register it in wordStack
+ * @param {string[]} wordsList - an array of characters representing words
+ * @param {number} startIdx - index to start constructing a word
+ * @param {string[]} wordStack - an array of individually registered words
+ * @returns 
+ */
 function registerWord(
   wordsList: string[],
   startIdx: number,
