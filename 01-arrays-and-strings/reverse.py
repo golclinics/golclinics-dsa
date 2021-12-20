@@ -1,15 +1,12 @@
-
+#Write a method/function, reverse(A) that takes an array of integers, A and reverses it
 
 def reverse(A):
-    copy_A = A[:]
-    j = 0
+    size = len(A)
+    result = []
+    for x in range(1, size + 1):
+        result.append(A[-x]) #Used to append values starting from the last integer in the list
+    return result
 
-    for i in range(len(A) - 1, -1, -1):
-        copy_A[j] = A[i]
-        j += 1
-    
-    return copy_A
-
-# tests
-a = [1, 4, 5, 6]
-print(reverse(a))
+#Testing purposes
+A = [3,2,1,0]
+print(reverse(A))
