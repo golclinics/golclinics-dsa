@@ -1,0 +1,10 @@
+Disadvantages of reversing a list using slicing (eg A[::-1])
+    - It does a shallow copy ie, modifying an element in the original list will 
+    also be reflected in the copy
+    - Not perfomant, works well for small arrays
+
+Points to note:
+- iterative is better than the recursive approach because:
+    - python has a slow function calls hence some adds some additional overhead
+    - python has a fixed recursion depth hence wont do well in big arrays - cython doesnt 
+    optimize for tail recursion hence could cause stack overflow errors on recursion
