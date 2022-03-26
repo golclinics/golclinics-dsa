@@ -1,0 +1,5 @@
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+out/
+.idea_modules/
